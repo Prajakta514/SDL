@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+   
+    <link rel="stylesheet" href="styles.css">
+   
+
+<style>
+    .carousel-img {
+        height: 630px;
+        width: 80%;
+        /* margin-right: 50px !important; */
+        object-fit: cover;
+        /* animation: slideUp 2s ease-in-out infinite; */
+    }
+
+   
+
+
+    .carousel-caption {
+        margin-top: 200px;
+        color: black;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
+
+    header {
+        margin-bottom: 0px;
+    }
+
+    .container.mt-5 {
+        margin-top: -2px;
+    }
+
+    .row {
+        margin-top: -50px; 
+       margin-left: 2px ;
+    }
+    .card {
+    max-width: 1600px; 
+    margin: 0 auto; 
+}
+ @keyframes slideInFromLeft {
+        0% {
+            opacity: 0;
+            transform: translateX(-100%);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    .latest-posts {
+        animation: slideInFromLeft 1s ease-in-out;
+        opacity: 1;
+    }
+
+</style>
+
+
+    <title>Blog</title>
+</head>
+
+<body>
+
+ 
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-center">
+        <a class="navbar-brand" href="#"> Blog</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="blog.html">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Categories</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+   
+<header>
+    <div id="headerCarousel" class="carousel slide" data-ride="carousel" data-interval="2000"> 
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="travel_bg.webp" class="d-block w-100 carousel-img" alt="Header Slide 1">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>Explore the World</h3>
+                    <p>Discover new adventures and destinations.</p>
+                    <a href="#" class="btn btn-primary">Start Exploring</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="food_bg.jpg" class="d-block w-100 carousel-img" alt="Header Slide 2">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>Taste the Flavors</h3>
+                    <p>Indulge in culinary delights from around the globe.</p>
+                    <a href="#" class="btn btn-primary">See Recipes</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="tech_bg.jpg" class="d-block w-100 carousel-img" alt="Header Slide 3">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>Discover Technology</h3>
+                    <p>Stay updated with the latest in technology.</p>
+                    <a href="#" class="btn btn-primary">Explore Tech</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+  
+
+    <!-- Featured Posts -->
+    <section class="container mt-5 card" style="background-image: url(yellow_bg.jpg);"> <br><br> <br><br>
+        <div class="row">
+            <br><br>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="bg.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Post Title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                            of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="travel.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Post Title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                            of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="tech.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Post Title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                            of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+                <br><br> <br><br></div>
+
+           
+            
+        </div>
+    </section>
+<br><br>
+    <section class="latest-posts" style="background-image: url(grey_bg.jpg);">
+        <h2>Latest Posts</h2><br><br>
+        <div class="container">
+            
+            <div class="row">
+                <div class="col-md-4 latest-post-card">
+                    <div class="card">
+                        <img src="music.avif" class="card-img-top" alt="Latest Post 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Latest Post Title 1</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur deleniti itaque debitis tempore fuga quo qui voluptas mollitia ea facilis, rerum dicta. Autem dolorum quis ut odio error maxime eligendi.</p>
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 latest-post-card">
+                    <div class="card">
+                        <img src="book.jpg" class="card-img-top" alt="Latest Post 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Latest Post Title 2</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur qui rem ipsa fugit. Deleniti nam enim ipsam, excepturi tenetur totam unde temporibus harum voluptatum consectetur omnis illo rerum? </p>
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 latest-post-card">
+                    <div class="card">
+                        <img src="blog.webp" class="card-img-top" alt="Latest Post 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Latest Post Title 3</h5>
+                            <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis cupiditate voluptas cumque nobis minus ex tempore ratione. Incidunt quis vero commodi possimus, voluptates quos quae similique ut velit, quisquam voluptas.</p>
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light text-center py-3 mt-5">
+        <p>&copy; 2024 Your Blog. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> 
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
+
+  
+</body>
+
+</html>

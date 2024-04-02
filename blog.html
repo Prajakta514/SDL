@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="blog.css">
+    <title>Blog Section</title>
+</head>
+<body>
+
+    <header>
+        <h1>Create a Blog Post</h1>
+    </header>
+
+    <section class="blog-form">
+        <form id="blogForm">
+            <label for="blogTitle">Title:</label>
+            <input type="text" id="blogTitle" name="blogTitle" required>
+
+            <label for="blogCategory">Category:</label>
+            <select id="blogCategory" name="blogCategory" required>
+                <option value="">Select</option>
+                <option value="travel">Travel</option>
+                <option value="food">Food</option>
+                <option value="tech">Technology</option>
+           
+            </select>
+
+            <label for="blogContent">Blog Content:</label>
+            <textarea id="blogContent" name="blogContent" rows="6" required></textarea>
+
+            <label for="blogImages">Add Images:</label>
+            <input type="file" id="blogImages" name="blogImages" accept="image/*" multiple>
+
+            <button type="submit">Publish</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Your Blog. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
