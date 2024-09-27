@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Animated About us Page </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+   
+    <link rel="stylesheet" href="styles.css">
+        
+        <style>
+            *{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+}
+.subscription-form-container {
+    display: flex;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+}
+
+.subscription-form-image {
+    width: 35%;
+    margin-right: 20px; /* Adjust spacing between the image and form */
+}
+
+.subscription-form {
+    width: 65%;
+}
+
+.subscription-form h3 {
+    color: #10100f;
+    margin-bottom: 20px;
+}
+
+.subscription-form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.subscription-form button {
+    display: block;
+    align-items: center;
+    width: 30%;
+    padding: 8px;
+    background-color: #5573f6;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.subscription-form button:hover {
+    background-color: #2634f2;
+}
+
+.subscription-form p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #242323;
+}
+
+
+.hero{
+    background-color: #f8f8f8;
+    overflow: hidden;
+}
+.heading h1{
+    color: #ff6347;
+    font-size: 55px;
+    text-align: center;
+    margin-top: 35px;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 65px auto;
+}
+.hero-content{
+    flex:1;
+    width: 600px;
+    margin: 0px 5px;
+    animation: fadeInUp 2s ease;
+}
+.hero-content h2{
+    font-size: 38px;
+    margin-bottom : 20px;
+    color: #333;
+}
+.hero-content p{
+    font-size: 24px;
+    line-height: 1.5;
+    margin-bottom : 40px;
+    color: #666;
+}
+.hero-content button{
+    display: inline-block;
+    background-color: #ff4500;
+    color: #fff;
+    padding: 12px  24px;
+    border-radius: 5px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.hero-content button:hover{
+    background-color: #ff6347;
+    transform: scale(1.1);
+}
+.hero-image{
+    flex:1;
+    width: 600px;
+    margin: auto;
+    animation: fadeInRight 2s ease;
+}
+img{
+     width: 100%;
+     height: auto;
+     border-radius: 10px; 
+}
+@media screen and (max-width: 768px){
+    .heading h1{
+        font-size: 45px;
+        margin-top: 30px;
+    }
+    .hero{
+        margin : 0px;
+    }
+    .container{
+        width: 100%;
+        flex-direction: column;
+        margin: 0px;
+        padding: 0px 40px;
+    }
+    .hero-content{
+        width: 100%;
+        margin: 35px 0px;
+    }
+    .hero-content h2{
+        font-size: 30px;
+    }
+    .hero-content p{
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    .hero-content button{
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+    .hero-image{
+         width: 100%;
+    }
+     .subscription-form-image {
+            width: 35%;
+        }
+
+        .subscription-form-image img {
+            width: 100%;
+            border-radius: 10px;
+        }
+}
+@keyframes fadeInUp {
+    0%{
+         opacity: 0;
+         transform: translateY(50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+   }
+}
+@keyframes fadeInRight {
+    0%{
+         opacity: 0;
+         transform: translateX(-50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+   }
+}
+        </style>
+    </head>
+    <body>
+         <nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-center">
+        <a class="navbar-brand" href="#"> Blog</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="cat.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="blog.html">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="filter.html">Categories</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+        <section class="hero">
+
+            <div class ="heading">
+                <h1>About Us</h1>
+            </div>
+            
+                <div class="subscription-form-container" style="background-color: #ff8873;">
+                    <img src="email.jpg" alt="Newsletter" class="subscription-form-image">
+                    <div class="subscription-form">
+                        <h3>Subscribe to Our Newsletter</h3>
+                        <form id="subscribeForm">
+                            <input type="email" id="emailInput" name="email" placeholder="Enter your email" required>
+                            <button type="submit">Subscribe</button>
+                        </form><br><br>
+                        <p>Stay updated with the latest blog posts by subscribing to our newsletter</p>
+                    </div>
+                </div>
+            <div class="container"> 
+                <div class="hero-content">
+                    <h2>Welcome To Our Website</h2> 
+                    <p>Discover the latest trends and innovations in technology, design, and more. Our team of experts brings you the best content and insights to help you stay ahead of the curve</p>
+                    <button class="cta-button">Learn More</button> 
+                </div> 
+                <div class="hero-image">
+                    <img src="blog.webp"> 
+                </div> 
+            </div>
+
+            
+
+        
+        </section>
+        
+
+
+<!-- Google Sheets integration script -->
+<script>
+    document.getElementById("subscribeForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+        const email = document.getElementById("emailInput").value;
+        if (email) {
+            submitFormToGoogleSheet(email);
+        } else {
+            alert("Please enter your email address.");
+        }
+    });
+
+    function submitFormToGoogleSheet(email) {
+        const formData = new FormData();
+        formData.append('email', email);
+
+        fetch('https://script.google.com/macros/s/AKfycbxIIEjE5T5uDb4_-bPFuzyebmjb6diCUcG-Trw24yHEb3GrTAcNh_Fp6wbBy7uQHToDXw/exec', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
+            if (response.ok) {
+                return response.text();
+            }
+            throw new Error('Network response was not ok.');
+        })
+        .then(data => {
+            alert(data); // Show success message
+            document.getElementById("subscribeForm").reset(); // Reset form after submission
+        })
+        .catch(error => {
+            console.error('There was a problem with the fetch operation:', error);
+            alert("An error occurred. Please try again later.");
+        });
+    }
+</script> 
+
+
+    </body>
+</html> 
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Animated About Us Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Your custom styles here */
+        /* Add quotes styling */
+        .quotes-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .quote {
+            font-style: italic;
+            font-size: 24px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        /* Add form styling */
+        .subscription-form {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f8f8;
+            border-radius: 10px;
+        }
+
+        .subscription-form h3 {
+            color: #ff6347;
+            margin-bottom: 20px;
+        }
+
+        .subscription-form input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        .subscription-form button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #ff4500;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .subscription-form button:hover {
+            background-color: #ff6347;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-center">
+    <a class="navbar-brand" href="#">Blog</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="cat.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="blog.html">Blog</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="filter.html">Categories</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<section class="hero">
+    <div class="heading">
+        <h1>About Us</h1>
+    </div>
+    <div class="container">
+        <div class="hero-content">
+            <h2>Welcome To Our Website</h2>
+            <p>Discover the latest trends and innovations in technology, design, and more. Our team of experts brings you the best content and insights to help you stay ahead of the curve</p>
+            <button class="cta-button">Learn More</button>
+        </div>
+        <div class="hero-image">
+            <img src="blog.webp">
+        </div>
+    </div>
+</section>
+
+<div class="quotes-container">
+    <div class="quote">"The only way to do great work is to love what you do." - Steve Jobs</div>
+    <div class="quote">"Success is not final, failure is not fatal: It is the courage to continue that counts." - Winston Churchill</div>
+</div>
+
+<div class="subscription-form">
+    <h3>Subscribe to Our Newsletter</h3>
+    <form id="subscribeForm">
+        <input type="email" id="emailInput" name="email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+    </form>
+</div>
+
+
+<script>
+    document.getElementById("subscribeForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+        const email = document.getElementById("emailInput").value;
+        if (email) {
+            submitFormToGoogleSheet(email);
+        } else {
+            alert("Please enter your email address.");
+        }
+    });
+
+    function submitFormToGoogleSheet(email) {
+        const formData = new FormData();
+        formData.append('email', email);
+
+        fetch('https://script.google.com/macros/s/AKfycbxIIEjE5T5uDb4_-bPFuzyebmjb6diCUcG-Trw24yHEb3GrTAcNh_Fp6wbBy7uQHToDXw/exec', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
+            if (response.ok) {
+                return response.text();
+            }
+            throw new Error('Network response was not ok.');
+        })
+        .then(data => {
+            alert(data); // Show success message
+            document.getElementById("subscribeForm").reset(); // Reset form after submission
+        })
+        .catch(error => {
+            console.error('There was a problem with the fetch operation:', error);
+            alert("An error occurred. Please try again later.");
+        });
+    }
+</script> 
+
+
+</body>
+</html> -->

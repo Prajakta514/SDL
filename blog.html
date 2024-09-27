@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,39 +6,314 @@
     <link rel="stylesheet" href="blog.css">
     <title>Blog Section</title>
 </head>
+<style>
+       .blog-editor {
+    width: 97%;
+    height: 450px; 
+    padding: 10px;
+    margin: 10px;
+    margin-top: 10px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    overflow-y: auto;
+    background-size: cover;
+    background-position: center;
+    
+    padding-top: 100px; 
+}
+
+        #themePhotos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .theme-photo-container {
+            position: relative;
+            margin: 10px;
+            overflow: hidden;
+        }
+
+        .theme-photo {
+            width: 700px; /* Set your desired width */
+            height: 400px;
+            margin: 30px;
+            transition: transform 0.3s;
+        }
+
+        .theme-photo:hover {
+            transform: scale(1.05); /* Zoom effect on hover */
+        }
+
+        .select-theme-button {
+            font-size: xx-large;
+            position: absolute;
+            bottom: 160px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(62, 96, 235, 0.8);
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .theme-photo-container:hover .select-theme-button {
+            opacity: 1;
+        }
+    </style>
 <body>
 
-    <header>
-        <h1>Create a Blog Post</h1>
-    </header>
+<header style="max-height: 18px;">
+    <h2 style="top:0; margin: 0; padding: 0;">Create a Blog Post</h2>
+</header>
 
-    <section class="blog-form">
-        <form id="blogForm">
-            <label for="blogTitle">Title:</label>
-            <input type="text" id="blogTitle" name="blogTitle" required>
+<div class="blog-form" id="blogFormContainer">
+    <form id="blogForm">
+        <label id="title" for="blogTitle">Title:</label>
+        <input type="text" id="blogTitle" name="blogTitle" required>
+         <label for="blogCategory">Category:</label>
+        <select id="blogCategory" name="category" required>
+              <option >Select</option>
+            <option value="travel">Travel</option>
+            <option value="food">Food</option>
+            <option value="technology">Technology</option>
+            <option value="books">Books</option>
+            <option value="other">Other</option>
+        </select><br>
+        <button type="button" id="themeButton">Choose Theme</button>
+        
+    </form>
+</div>
 
-            <label for="blogCategory">Category:</label>
-            <select id="blogCategory" name="blogCategory" required>
-                <option value="">Select</option>
-                <option value="travel">Travel</option>
-                <option value="food">Food</option>
-                <option value="tech">Technology</option>
-           
-            </select>
+<section id="themeSection" style="display: none;">
+    <h2>Choose a Design Theme:</h2>
+    <button type="button" id="nextButton" style="float: right;">Next</button>
+    <div id="themePhotos">
+        <div class="theme-photo-container">
+            <img class="theme-photo" src="bg_book.avif">
+            <button class="select-theme-button">Select Theme</button>
+        </div>
+        <div class="theme-photo-container">
+            <img class="theme-photo" src="tech_bg.jpg">
+            <button class="select-theme-button">Select Theme</button>
+        </div>
+        <div class="theme-photo-container">
+            <img class="theme-photo" src="bg_gray.jpg">
+            <button class="select-theme-button">Select Theme</button>
+        </div>
+        <div class="theme-photo-container">
+            <img class="theme-photo" src="bg_pink.jpeg">
+            <button class="select-theme-button">Select Theme</button>
+        </div>
+        <div class="theme-photo-container">
+            <img class="theme-photo" src="bg_food.avif">
+            <button class="select-theme-button">Select Theme</button>
+        </div>
+    </div>
+</section>
 
-            <label for="blogContent">Blog Content:</label>
-            <textarea id="blogContent" name="blogContent" rows="6" required></textarea>
+<section id="editorSection" style="display: none; position: relative;">
+    <p>Write Your blog here...</p>
+    <div id="editor" contenteditable="true" class="blog-editor"></div>
+      
+    <h2 id="editorTitle" style="position: absolute; top: 20px; left: 20px; color: rgb(12, 12, 12); font-size: 24px;"></h2>
+  <div id="editor-buttons">
+        <button id="boldButton">Bold</button>
+        <button id="italicButton">Italic</button>
+        <button id="underlineButton">Underline</button>
+        Color: <input type="color" id="colorPicker" style="width: 10px;">
+       
+    </div>
+     <button type='submit' id="publishButton">Publish Blog</button> 
+</section>
 
-            <label for="blogImages">Add Images:</label>
-            <input type="file" id="blogImages" name="blogImages" accept="image/*" multiple>
-
-            <button type="submit">Publish</button>
-        </form>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 Your Blog. All rights reserved.</p>
-    </footer>
-
+<script src="blog.js"></script>
 </body>
 </html>
+ -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="blog.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+   
+    <title>Blog Section</title>
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-image: url('bg_gray.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(10px);
+}
+       .blog-editor {
+    width: 97%;
+    height: 450px; 
+    padding: 10px;
+    margin: 10px;
+    margin-top: 10px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    overflow-y: auto;
+    background-size: cover;
+    background-position: center;
+    
+    padding-top: 100px; 
+}
+
+        #themePhotos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .theme-photo-container {
+            position: relative;
+            margin: 10px;
+            overflow: hidden;
+        }
+
+        .theme-photo {
+            width: 700px; /* Set your desired width */
+            height: 400px;
+            margin: 30px;
+            transition: transform 0.3s;
+        }
+
+        .theme-photo:hover {
+            transform: scale(1.05); /* Zoom effect on hover */
+        }
+
+        .select-theme-button {
+            font-size: xx-large;
+            position: absolute;
+            bottom: 160px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(62, 96, 235, 0.8);
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .theme-photo-container:hover .select-theme-button {
+            opacity: 1;
+        }
+    </style>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-center">
+        <a class="navbar-brand" href="#"> Blog</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="cat.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="blog.html">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="filter.html">Categories</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+
+<div class="blog-form" id="blogFormContainer">
+    <form id="blogForm">
+        <center>
+    <h2 style="color:#ff6347;">Create  Blog Post</h2>
+</center>
+        <label id="title" for="blogTitle">Title:</label>
+        <input type="text" id="blogTitle" name="blogTitle" required>
+         <label for="blogCategory">Category:</label>
+        <select id="blogCategory" name="category" required>
+              <option >Select</option>
+            <option value="travel">Travel</option>
+            <option value="food">Food</option>
+            <option value="technology">Technology</option>
+            <option value="books">Books</option>
+            <option value="other">Other</option>
+        </select><br>
+        <button type="button" id="themeButton">Choose Theme</button>
+        
+    </form>
+</div>
+
+<section id="themeSection" style="display: none;">
+    <h2>Choose a Design Theme:</h2>
+    <button type="button" id="nextButton" style="float: right;">Next</button>
+    <div id="themePhotos">
+        <div class="theme-photo-container">
+            <img class="theme-photo" src="bg_book.avif">
+            <button class="select-theme-button">Select Theme</button>
+        </div>
+        <div class="theme-photo-container">
+            <img class="theme-photo" src="tech_bg.jpg">
+            <button class="select-theme-button">Select Theme</button>
+        </div>
+        <div class="theme-photo-container">
+            <img class="theme-photo" src="bg_gray.jpg">
+            <button class="select-theme-button">Select Theme</button>
+        </div>
+        <div class="theme-photo-container">
+            <img class="theme-photo" src="bg_pink.jpeg">
+            <button class="select-theme-button">Select Theme</button>
+        </div>
+        <div class="theme-photo-container">
+            <img class="theme-photo" src="bg_food.avif">
+            <button class="select-theme-button">Select Theme</button>
+        </div>
+    </div>
+</section>
+
+<section id="editorSection" style="display: none; position: relative;">
+    <p>Write Your blog here...</p>
+    <div id="editor" contenteditable="true" class="blog-editor"></div>
+    <div id="editor-buttons">
+        <button id="boldButton">Bold</button>
+        <button id="italicButton">Italic</button>
+        <button id="underlineButton">Underline</button>
+        Color: <input type="color" id="colorPicker" style="width: 10px;">
+         <label for="blogFile">Upload File:</label>
+        <input type="file" id="blogFile" name="blogFile"><br> 
+    </div>
+    <button type='submit' id="publishButton">Publish Blog</button> 
+</section>
+
+
+<script src="blog.js"></script>
+</body>
+</html>
+

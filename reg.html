@@ -6,7 +6,7 @@
     <title>Registration Page</title>
     <style>
         body {
-            background-image: url('bg2.jpeg'); 
+            background-image: url('b8.jpg'); 
             background-size: cover;
             font-family: 'Arial', sans-serif;
             margin: 0;
@@ -14,7 +14,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 100vh;
+            height: 90vh;
         }
 
         h1 {
@@ -79,35 +79,37 @@
         <h1>Blog With The Best</h1>
         <h2>Registration </h2><br><br>
         <div>
-            <form name="registration" onsubmit="return validate()">
+           <form name="registration" method="POST" action="regi.php">
+
                 <div class="form-row">
                     <label for="name">Name</label>
-                    <input type="text" id="name">
+                    <input type="text" id="name" name="name">
                 </div>
                 <div class="form-row">
                     <label for="no">Contact no.</label>
-                    <input type="text" id="no">
+                    <input type="text" id="no" name="no">
                 </div>
                 <div class="form-row">
                     <label for="email">Email</label>
-                    <input type="email" id="email">
+                    <input type="email" id="email" name="email">
                 </div>
                 <div class="form-row">
                     <label for="username">Username</label>
-                    <input type="text" id="username">
+                    <input type="text" id="username" name="username">
                 </div>
                 <div class="form-row">
                     <label for="pass">Password</label>
-                    <input type="password" id="pass">
+                    <input type="password" id="pass" name="pass">
                 </div>
                 <div class="form-row">
                     <label for="conf">Confirm Password</label>
-                    <input type="password" id="conf">
+                    <input type="password" id="conf" name="conf">
                 </div>
+
                 <br>
                 
                 
-                <button type="button" onclick="validate()" ><a href="login.html">Submit</a></button>
+                <button type="submit" onclick="validate()" >Submit</button>
             </form>
         </div>
     </center>

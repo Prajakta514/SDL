@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('bg_gray.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-size: 100 1000;
+    background-position: center; */
+    backdrop-filter: blur(10px);
+}
+
+.hed{
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    
+}
+
+h1 {
+    margin: 0;
+}
+
+
+
+#categories button {
+    margin-right: 10px;
+    height: 40px; /* Adjust the height as needed */
+    padding: 10px 20px; /* Adjust the padding as needed */
+    background-color: #f3f5f8; /* Add background color */
+    color: #080808; /* Add text color */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#categories button:hover {
+    background-color: #8bedf1; /* Change background color on hover */
+}
+/* 
+button {
+    margin-right: 10px;
+} */
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.card {
+    width: calc(45% - 20px);
+    min-width: 300px;
+    min-height: 300px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-right: 10px; /* Adjust the margin-right as needed */
+}
+
+
+.card img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
